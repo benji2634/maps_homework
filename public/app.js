@@ -17,6 +17,7 @@ var handleChicagoButtonClick = function() {
   var chicago = {lat: 41.87, lng: -87.63};
   var mainMap = new MapWrapper(container, chicago, 10);
   mainMap.addMarker(chicago);
+  mainMap.addClickEvent();
   // var chicagoButton = document.querySelector('#chicago-button');
   // chicagoButton.style.display = "none";
 }
@@ -38,6 +39,8 @@ function geoFindMe() {
     var location = {lat: latitude, lng: longitude};
     var mainMap = new MapWrapper(container, location, 10);
     mainMap.addMarker(location);
+    mainMap.addClickEvent();
+
   }
 
   function error() {
